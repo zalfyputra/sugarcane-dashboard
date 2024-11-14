@@ -8,13 +8,16 @@ import { AppService } from './app.service';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: 'ep-ancient-cell-a1vm0d2f.ap-southeast-1.aws.neon.tech',
       port: 5432,
-      username: 'postgres',
-      password: '12345',
+      username: 'tebu_owner',
+      password: '5gYuBR2WsOkQ',
       database: 'tebu',
       autoLoadEntities: true,
       synchronize: true,
+      ssl: {
+        rejectUnauthorized: false,
+      },
     }),
     KebunTebuModule,
   ],
